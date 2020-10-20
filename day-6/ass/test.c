@@ -12,15 +12,24 @@ int main()
 
   if(id == 0)
   {
-    printf("hello\n");	  
     read(pfd[0],rbuff,128);
     close(pfd[0]);
     printf("child:%s\n",rbuff);
   }
   else
   {
-  //  write(pfd[1],"cdac\n",5);
+    write(pfd[1],"cdac\n",5);
     close(pfd[1]);
   }
+
+}
+
+void send_data(int a)
+{
+	
+}
+
+int receive_data(int a)
+{
 
 }
