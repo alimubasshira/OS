@@ -71,14 +71,12 @@
     * Destroy
 * Scheduling algorithm -> choose the next process that has to execute
 
-* Context switch -> Context Saving (Current process) + Scheduling (Choose the new 
-process) + Context Restoring (New Process)
+* Context switch -> Context Saving (Current process) + Scheduling (Choose the new process) + Context Restoring (New Process)
 
 * Context -> PC, SP, GPR, Flags -> Hardware Registers -> Uniprocessor (1 copy)
 
 * Blocking -> Process may go into a waiting state
-* Non Blocking call -> never block -> immediately return back after doing 
-functionality
+* Non Blocking call -> never block -> immediately return back after doing functionality
 
 * Inter process communication (IPC)
   P1 -> P2
