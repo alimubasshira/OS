@@ -23,27 +23,31 @@
     
 * Static Library
   * ar x (extract)
-  * ar crv libname.a 1.o 2.o..... n.o => (*.o)
+  * ar crv libname.a 1.o 2.o..... n.o => (*.o) ----->creating
+  * gcc -o output main.c libarith.a -----------> linking
   * lib function definitoin embedded in binary
   * multiple copies of library function loaded in the memory
   * more memory
   
 * Dynamic Library
-  * gcc -o libname.so -shared -fPIC
-  * lib function deference definitoin embedded in binary
+  * gcc -o libname.so -shared -fPIC  ---->creating
+  * gcc -o output main.c -larith -L -----------> linking
+  * lib function reference embedded in binary
   * single copy of library function loaded in the memory
   * less memory
   
-* PID, PPID, UID
+* PID, PPID, UID (user id who create this process)
 * getpid(), getppid()
 * man pages
 
 * fork - create a new proces
   * parent and child relationship
   * parent and child have their own address space (text, data, bss, stack and heap)
+  * child process have duplicate address space of paraent (copy_on_write give 2 else 1 will continue)
   
-* Pseudo parallelism
-* True parallelism
+* Pseudo parallelism - several processes are being processed at the same time.This rapid switching back and forth of the CPU between programs givesthe illusion of
+                       parallelism and is termed as pseudo parallelism.
+* True parallelism - where two or more tasks are being executed simultaneously.
 
 * ltrace
 * strace
@@ -52,7 +56,8 @@
 * Library
   * User space
   * May be buffered I/O
-  * Formatted I/O* System
+  * Formatted I/O
+  * System
 * Kernel space
   * Not buffered I/O
   * No formatted I/O
@@ -95,6 +100,8 @@
     * Unrelated processes
     * fifos aka named pipes
     * mkfifo (command and API)
+    
+* symmetric multiprocessing(SMP), in which each peer CPU processor performs all tasks, including operating-system functions and user processes.
 * Batch
 * Multi programming
 * Multi tasking
@@ -161,4 +168,4 @@ Case 3:
 * git push
 
 
-
+u
